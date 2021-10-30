@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary-color: #000920;
+	--white: #fff;
+	--grey-color: #ababab;
+	--violet-color: #7e0cf0;
+	--top: 0;
+	--left: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	// overflow: hidden;
+	cursor: url('../assets/cursor.svg') 4 12, auto;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.f-center {
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+.section {
+	width: 100vw;
+	height: 100vh;
+}
+.intro-section {
+	cursor: auto;
+	background: var(--primary-color);
+	display: grid;
+	place-content: center;
+	position: fixed;
+	.intro-svg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	.intro-text {
+		font-weight: 700;
+		font-size: clamp(2rem, 5vw, 4rem);
+		letter-spacing: 1px;
+		color: var(--white);
+		text-transform: uppercase;
+	}
+}
+.main-section {
+	display: none;
+	header {
+		width: 100%;
+		padding: 1rem 0;
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.title {
+			letter-spacing: 0.025rem;
+		}
+		.level {
+			color: var(--grey-color);
+			font-size: 1.5rem;
+		}
+	}
+	.button-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		button {
+			outline: none;
+			border: none;
+			padding: 0.5rem 1rem;
+			background: var(--violet-color);
+			color: var(--white);
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.3s ease-in-out;
+			cursor: pointer;
+			&:active {
+				background: #5f09b6;
+			}
+		}
+	}
+	.svg-container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		svg {
+			height: 30vw !important;
+			width: auto;
+		}
+		.level-two {
+			display: none;
+		}
+	}
+}
+.winner-img {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 100000;
+	object-fit: cover;
+	display: none;
+}
+// .mousepointer {
+// 	position: absolute;
+// 	width: 0.5rem;
+// 	height: 0.5rem;
+// 	background: var(--violet-color);
+// 	border-radius: 50%;
+// 	top: var(--top);
+// 	left: var(--left);
+// 	z-index: 10000;
+// 	transform: translate(-50%, -50%);
+// }
